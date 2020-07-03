@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
-import { PrimaryButton, SecondaryButton, TertiaryButton } from './components/Buttons';
+import { Modal } from './components';
 import { GlobalStyle, defaultTheme, darkTheme } from './utils';
 const App = () => {
 	const [useDarkTheme, setDarkTheme] = useState(false);
@@ -26,9 +26,7 @@ const App = () => {
 					width: '100vw',
 					height: '100vh',
 				}}>
-				<PrimaryButton>Hello World</PrimaryButton>
-				<SecondaryButton>Hello World</SecondaryButton>
-				<TertiaryButton>Hey World</TertiaryButton>
+				<Modal />
 			</div>
 			<GlobalStyle />
 		</ThemeProvider>
