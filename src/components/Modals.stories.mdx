@@ -1,0 +1,24 @@
+
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { PrimaryButton, SecondaryButton, TertiaryButton } from "./Buttons";
+import {Modal} from "./Modal"
+import {action} from '@storybook/addon-actions';
+import {withKnobs,boolean} from '@storybook/addon-knobs';
+
+<Meta  title="Design System|Modals" component={PrimaryButton} />
+
+# Modals
+
+Modals are used to trigger actions within an application.
+
+## Usage
+
+Modals are used to trigger internal actions within your web applications.
+
+
+<Preview withToolbar>
+  <Story name="signUp">    
+    <Modal showModal={boolean("Show Modal",false)}  onClick={action('button-click')}>Toggle Modal</Modal>
+  </Story>
+</Preview>
+

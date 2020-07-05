@@ -1,0 +1,25 @@
+{
+	"workbench.statusBar.visible": true,
+	"workbench.activityBar.visible": true,
+
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#57035f",
+		"statusBar.noFolderBackground": "#333333",
+		"statusBar.debuggingBackground": "#263238",
+		"activityBarBadge.background": "#ac029d",
+		"list.activeSelectionForeground": "#616161",
+		"list.inactiveSelectionForeground": "#616161",
+		"list.highlightForeground": "#616161",
+		"scrollbarSlider.activeBackground": "#61616150",
+		"editorSuggestWidget.highlightForeground": "#616161",
+		"textLink.foreground": "#616161",
+		"progressBar.background": "#616161",
+		"pickerGroup.foreground": "#616161",
+		"tab.activeBorder": "#616161",
+		"notificationLink.foreground": "#616161"
+	},
+	"workbench.editor.showTabs": true,
+	"workbench.commandPalette.preserveInput": false,
+	"workbench.editor.enablePreviewFromQuickOpen": false,
+	"workbench.editor.enablePreview": true
+}

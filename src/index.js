@@ -5,6 +5,7 @@ import { Modal } from './components';
 import { GlobalStyle, defaultTheme, darkTheme } from './utils';
 const App = () => {
 	const [useDarkTheme, setDarkTheme] = useState(false);
+	const [showModal, setShowModal] = useState(false);
 	return (
 		<ThemeProvider theme={useDarkTheme ? darkTheme : defaultTheme}>
 			<button
@@ -17,6 +18,11 @@ const App = () => {
 				onClick={() => setDarkTheme(false)}>
 				Default Theme
 			</button>
+			<button
+				style={{ background: 'none', margin: '0 16px 24px', padding: '8px', cursor: 'pointer' }}
+				onClick={() => setShowModal(!showModal)}>
+				Toggle Modal
+			</button>
 			<div
 				style={{
 					background: useDarkTheme ? defaultTheme.primaryColor : darkTheme.primaryColor,
@@ -26,7 +32,7 @@ const App = () => {
 					width: '100vw',
 					height: '100vh',
 				}}>
-				<Modal />
+				<Modal showModal={showModal} setShowModal={setShowModal} />
 			</div>
 			<GlobalStyle />
 		</ThemeProvider>
