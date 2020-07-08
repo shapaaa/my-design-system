@@ -1,24 +1,24 @@
 
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { PrimaryButton, SecondaryButton, TertiaryButton } from "./Buttons";
-import {Modal} from "./Modal"
+import {SignUpModal} from "./SignUpModal"
 import {action} from '@storybook/addon-actions';
 import {withKnobs,boolean} from '@storybook/addon-knobs';
 
-<Meta  title="Design System|Modals" component={PrimaryButton} />
+<Meta  title="Design System|SignUpModals" component={PrimaryButton} />
 
-# Modals
+# SignUpModals
 
-Modals are used to trigger actions within an application.
+SignUpModals are used to trigger actions within an application.
 
 ## Usage
 
-Modals are used to trigger internal actions within your web applications.
+SignUpModals are used to trigger internal actions within your web applications.
 
 
 <Preview withToolbar>
   <Story name="signUp">    
-    <Modal showModal={boolean("Show Modal",false)}  onClick={action('button-click')}>Toggle Modal</Modal>
+    <SignUpModal showSignUpModal={boolean("Show SignUpModal",false)}  onClick={action('button-click')}>Toggle SignUpModal</SignUpModal>
   </Story>
 </Preview>
 

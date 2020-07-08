@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
-import { Modal } from './components';
+import { SignUpModal } from './components';
 import { GlobalStyle, defaultTheme, darkTheme } from './utils';
 const App = () => {
 	const [useDarkTheme, setDarkTheme] = useState(false);
-	const [showModal, setShowModal] = useState(false);
+	const [showSignUpModal, setShowSignUpModal] = useState(false);
 	return (
 		<ThemeProvider theme={useDarkTheme ? darkTheme : defaultTheme}>
 			<button
@@ -20,8 +20,8 @@ const App = () => {
 			</button>
 			<button
 				style={{ background: 'none', margin: '0 16px 24px', padding: '8px', cursor: 'pointer' }}
-				onClick={() => setShowModal(!showModal)}>
-				Toggle Modal
+				onClick={() => setShowSignUpModal(!showSignUpModal)}>
+				Toggle SignUpModal
 			</button>
 			<div
 				style={{
@@ -32,7 +32,7 @@ const App = () => {
 					width: '100vw',
 					height: '100vh',
 				}}>
-				<Modal showModal={showModal} setShowModal={setShowModal} />
+				<SignUpModal showSignUpModal={showSignUpModal} setShowSignUpModal={setShowSignUpModal} />
 			</div>
 			<GlobalStyle />
 		</ThemeProvider>

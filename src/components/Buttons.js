@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { typeScale } from '../utils';
 import { applyStyleModifiers } from 'styled-components-modifiers';
+
 const BUTTON_MODIFIERS = {
-	small: ({ props }) => `
-	font-size:${typeScale.helperText};
-	padding: 8px;
+	small: () => `
+			font-size:${typeScale.helperText};
+			padding: 8px;
 	`,
-	large: ({ props }) => `
+	large: () => `
 	 font-size:${typeScale.header5};
 	 padding:16px 24px;
 	`,
@@ -77,6 +78,7 @@ const BUTTON_MODIFIERS = {
 	color:${props.theme.status.successColor};
 	`,
 };
+
 const Button = styled.button`
 	@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 	padding: 12px 24px;
